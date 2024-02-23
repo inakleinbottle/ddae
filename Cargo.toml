@@ -1,0 +1,21 @@
+[package]
+name = "ddae"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version="*", features=["derive"] }
+serde_json = "*"
+tokio = { version="*", features=["full"] }
+tinytemplate = { version="*", features = [] }
+anyhow = { version = "*", features = [] }
+zbus = { version = "*", default-features=false, features = ["tokio"]}
+futures-util = "0.3.29"
+slog = { version="*", features=[] }
+slog-journald = "*"
+pipewire = "*"
+hyprland = "*"
+pulse = { package="libpulse-binding", version="*", features=["pa_v15"]}
+pulse_tokio = { package="libpulse-tokio", version="*" }
